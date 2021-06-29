@@ -1,0 +1,46 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Dairy Product{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-6 ">
+        <div class="card  " style="width: 30rem;">
+          <img src="https://source.unsplash.com/2000x1000/?Milk" class="card-img-top" alt="Milk">
+          <div class="card-body">
+            <h5 class="card-title">Milk</h5>
+            <button href="#" class="btn btn-primary cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 ">
+        <div class="card  " style="width: 30rem;">
+          <img src="https://source.unsplash.com/2000x1000/?Paneer" class="card-img-top" alt="Milk">
+          <div class="card-body">
+            <h5 class="card-title">Paneer</h5>
+            <button href="#" class="btn btn-primary cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block js %}
+
+<script>
+  console.log("Hello World");
+
+  if(localStorage.getItem("cart") == null){
+    var cart = {};
+  }
+
+  else{
+    cart = JSON.parse(localStorage.getItem("cart"));
+  }
+
+  $('.cart').click(function(){
+    console.log("clicked");
+  });
+</script>
+{% endblock %} 
